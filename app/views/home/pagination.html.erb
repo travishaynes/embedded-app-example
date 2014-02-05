@@ -13,8 +13,12 @@
         }
       ],
       pagination: {
-        previous: <%= (@previous_page.present? ? {href: @previous_page} : nil).to_json.html_safe %>,
-        next: <%= (@next_page.present? ? {href: @next_page} : nil).to_json.html_safe %>
+        previous: {
+           href: <%= (@previous_page.present? ? {href: @previous_page} : nil).to_json.html_safe %>
+        }
+        next: {
+           href: <%= (@next_page.present? ? {href: @next_page} : nil).to_json.html_safe %>
+        }
       }
     });
   });
